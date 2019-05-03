@@ -3,4 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="ae_app_desc">Archie\'s first steps with Android</string>
     <string name="ae_activity_name">Activity1</string>
+    <color name="opaque_red">#f00</color>
+    <color name="opaque_blue">#00f</color>
 </resources>
