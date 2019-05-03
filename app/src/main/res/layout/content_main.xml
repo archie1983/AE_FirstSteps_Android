@@ -9,6 +9,7 @@
     tools:showIn="@layout/activity_main">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ae_app_desc"
@@ -21,35 +22,63 @@
         android:id="@+id/imgJellyFish"
         android:layout_width="103dp"
         android:layout_height="272dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="@string/img_jelly_fish_desc"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/imgNotes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/backgrounds/scenic[10]" />
 
     <ImageView
         android:id="@+id/imgNotes"
-        android:layout_width="116dp"
-        android:layout_height="302dp"
-        app:srcCompat="@drawable/example_bg"
-        tools:layout_editor_absoluteX="279dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_width="115dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="357dp"
+        android:contentDescription="@string/img_music_desc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/example_bg" />
 
     <EditText
         android:id="@+id/txtEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="161dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="45dp"
         android:ems="10"
+        android:hint="@string/edit_text_desc"
         android:inputType="textPersonName"
         android:text="@string/app_name"
         android:textColor="@color/opaque_red"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="508dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnChangeColour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:importantForAutofill="no" tools:targetApi="o"/>
 
     <Button
         android:id="@+id/btnChangeColour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Change Colour"
-        tools:layout_editor_absoluteX="79dp"
-        tools:layout_editor_absoluteY="598dp" />
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="194dp"
+        android:layout_marginBottom="29dp"
+        android:text="@string/btn_colour_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditText" />
 
 </android.support.constraint.ConstraintLayout>

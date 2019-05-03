@@ -3,6 +3,11 @@
     <string name="action_settings">Settings</string>
     <string name="ae_app_desc">Archie\'s first steps with Android</string>
     <string name="ae_activity_name">Activity1</string>
+    <string name="img_jelly_fish_desc">Jelly Fish Picture</string>
+    <string name="img_music_desc">Music sheet</string>
+    <string name="edit_text_desc">Just and edit text</string>
+    <string name="btn_colour_desc">A button to change text colour</string>
+    <string name="btn_colour_text">Change Colour</string>
     <color name="opaque_red">#f00</color>
     <color name="opaque_blue">#00f</color>
 </resources>
