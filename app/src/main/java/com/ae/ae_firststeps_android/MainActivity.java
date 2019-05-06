@@ -1,5 +1,6 @@
 package com.ae.ae_firststeps_android;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -95,5 +96,13 @@ public class MainActivity extends AppCompatActivity {
     public void changeTextColour(View v) {
         EditText txtEditText = (EditText) findViewById(R.id.txtEditText);
         txtEditText.setTextColor(getResources().getColor(R.color.opaque_blue));
+    }
+
+    public void startService(View v) {
+        startService(new Intent(getBaseContext(), AEService.class));
+    }
+
+    public void stopService(View v) {
+        stopService(new Intent(getBaseContext(), AEService.class));
     }
 }
