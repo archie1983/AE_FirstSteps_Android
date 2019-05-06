@@ -113,4 +113,18 @@
         app:layout_constraintStart_toEndOf="@+id/imgJellyFish"
         app:layout_constraintTop_toBottomOf="@+id/btnStartService" />
 
+    <Button
+        android:id="@+id/btnSendCustomIntent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="139dp"
+        android:onClick="sendCustomIntent"
+        android:text="Send Custom Intent"
+        app:layout_constraintBottom_toTopOf="@+id/txtExample"
+        app:layout_constraintEnd_toStartOf="@+id/imgNotes"
+        app:layout_constraintStart_toEndOf="@+id/imgJellyFish"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
 </android.support.constraint.ConstraintLayout>

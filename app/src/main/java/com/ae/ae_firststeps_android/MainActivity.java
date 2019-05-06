@@ -105,4 +105,10 @@ public class MainActivity extends AppCompatActivity {
     public void stopService(View v) {
         stopService(new Intent(getBaseContext(), AEService.class));
     }
+
+    public void sendCustomIntent(View v) {
+        Intent intent = new Intent();
+        intent.setAction(com.ae.CUSTOM_INTENT);
+        sendBroadcast(intent);
+    }
 }
