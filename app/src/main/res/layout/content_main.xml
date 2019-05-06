@@ -22,15 +22,13 @@
         android:id="@+id/imgJellyFish"
         android:layout_width="103dp"
         android:layout_height="272dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="161dp"
-        android:layout_marginBottom="40dp"
         android:contentDescription="@string/img_jelly_fish_desc"
-        app:layout_constraintBottom_toTopOf="@+id/txtExample"
-        app:layout_constraintEnd_toStartOf="@+id/imgNotes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtEditText"
+        app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.110000014"
         tools:srcCompat="@tools:sample/backgrounds/scenic[10]" />
 
     <ImageView
