@@ -7,6 +7,8 @@ import android.widget.Toast;
 
 public class AEReceiver extends BroadcastReceiver {
 
+//    private AEReceiver logReceiver = new AEReceiver();
+
     @Override
     public void onReceive(Context context, Intent intent) {
         // TODO: This method is called when the BroadcastReceiver is receiving

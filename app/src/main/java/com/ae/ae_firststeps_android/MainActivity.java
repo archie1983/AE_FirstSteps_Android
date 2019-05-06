@@ -1,6 +1,8 @@
 package com.ae.ae_firststeps_android;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,10 +13,21 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     String msg = "AE: ";
+
+    private AEReceiver myRunTimeReceiver = new AEReceiver() {
+      @Override
+      public void onReceive(Context context, Intent intent) {
+          // TODO: This method is called when the BroadcastReceiver is receiving
+          // an Intent broadcast.
+          //throw new UnsupportedOperationException("Not yet implemented");
+          Toast.makeText(context, "com.ae.CUSTOM_INTENT received.", Toast.LENGTH_LONG).show();
+      }
+    };
 
     /** Called when the activity is first created. */
     @Override
@@ -48,6 +61,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Log.d(msg, "The onResume() event");
+
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("com.ae.CUSTOM_INTENT");
+        filter.addCategory(Intent.CATEGORY_DEFAULT);
+        this.registerReceiver(myRunTimeReceiver,filter);
     }
 
     /** Called when another activity is taking focus. */
@@ -55,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         Log.d(msg, "The onPause() event");
+        this.unregisterReceiver(myRunTimeReceiver);
     }
 
     /** Called when the activity is no longer visible. */
@@ -108,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendCustomIntent(View v) {
         Intent intent = new Intent();
-        intent.setAction(com.ae.CUSTOM_INTENT);
+        intent.setAction("com.ae.CUSTOM_INTENT");
         sendBroadcast(intent);
     }
 }
