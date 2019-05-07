@@ -10,4 +10,5 @@
     <string name="btn_colour_text">Change Colour</string>
     <color name="opaque_red">#f00</color>
     <color name="opaque_blue">#00f</color>
+    <string name="title_activity_db">DBActivity</string>
 </resources>

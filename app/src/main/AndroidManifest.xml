@@ -9,13 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".DBActivity"
+            android:label="@string/title_activity_db"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ae.ae_firststeps_android.MainActivity" />
+        </activity>
+
         <receiver
             android:name=".SystemIntentReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED">
-                </action>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
             </intent-filter>
         </receiver>
         <receiver
@@ -23,7 +32,7 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.ae.CUSTOM_INTENT"></action>
+                <action android:name="com.ae.CUSTOM_INTENT" />
             </intent-filter>
         </receiver>
 
