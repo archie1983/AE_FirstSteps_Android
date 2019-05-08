@@ -51,6 +51,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <provider
+            android:authorities="com.ae.ae_firststeps_android.StudentsProvider"
+            android:name=".StudentsProvider" />
     </application>
 
 </manifest>
