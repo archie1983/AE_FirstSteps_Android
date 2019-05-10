@@ -49,7 +49,7 @@ public class DBActivity extends AppCompatActivity {
     }
     public void onClickRetrieveStudents(View view) {
         // Retrieve student records
-        String URL = "content://com.ae.ae_firststeps_android.StudentsProvider";
+        String URL = "content://" + StudentsProvider.PROVIDER_NAME;
 
         Uri students = Uri.parse(URL);
         Cursor c = managedQuery(students, null, null, null, "name");
