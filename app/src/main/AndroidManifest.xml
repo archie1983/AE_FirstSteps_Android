@@ -10,9 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".IntentCatcherActivity"
+            android:label="@string/title_activity_intent_catcher"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"></action>
+                <action android:name="com.ae.ae_firststeps_android.LAUNCH"></action>
+                <category android:name="android.intent.category.BROWSABLE"></category>
+                <category android:name="android.intent.category.DEFAULT"></category>
+                <data android:scheme="http"></data>
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".IntentDemoActivity"
             android:label="@string/title_activity_intent_demo"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".DBActivity"
             android:label="@string/title_activity_db"
@@ -51,7 +63,6 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

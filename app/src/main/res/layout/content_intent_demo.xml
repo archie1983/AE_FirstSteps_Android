@@ -39,4 +39,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnStartBrowser"
         app:layout_constraintVertical_bias="0.109" />
+
+    <Button
+        android:id="@+id/btnStartBrowsingWithLaunchAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="449dp"
+        android:text="Start Browsing With Launch Action"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStartPhone" />
+
+    <Button
+        android:id="@+id/btnExceptionalCondition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="387dp"
+        android:text="Exceptional Condition"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStartBrowsingWithLaunchAction" />
 </android.support.constraint.ConstraintLayout>

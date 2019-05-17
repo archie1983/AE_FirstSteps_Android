@@ -12,4 +12,5 @@
     <color name="opaque_blue">#00f</color>
     <string name="title_activity_db">DBActivity</string>
     <string name="title_activity_intent_demo">IntentDemoActivity</string>
+    <string name="title_activity_intent_catcher">IntentCatcherActivity</string>
 </resources>

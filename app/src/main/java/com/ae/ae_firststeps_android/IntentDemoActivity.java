@@ -12,7 +12,10 @@ import android.widget.Button;
 
 public class IntentDemoActivity extends AppCompatActivity {
 
-    Button btnStartBrowser, btnStartPhone;
+    Button btnStartBrowser,
+            btnStartPhone,
+            btnStartBrowsingWithLaunchAction,
+            btnExceptionalCondition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,31 @@ public class IntentDemoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(android.content.Intent.ACTION_VIEW,
                         Uri.parse("tel:23597"));
+                startActivity(i);
+            }
+        });
+
+        btnStartBrowsingWithLaunchAction = (Button)findViewById(R.id.btnStartBrowsingWithLaunchAction);
+        btnStartBrowsingWithLaunchAction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /**
+                 * Refer to AndroifManifest.xml for what activity is filtering for this action of the intent.
+                 */
+                Intent i = new Intent("com.ae.ae_firststeps_android.LAUNCH",Uri.parse("http://www.reddit.com"));
+                startActivity(i);
+            }
+        });
+
+        btnExceptionalCondition = (Button)findViewById(R.id.btnExceptionalCondition);
+        btnExceptionalCondition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /**
+                 * This will fail because neither the action has got an intent filter in the AndroidManifest,
+                 * nor there is a data section for "https" scheme in the intent filter in AndroidManifest.
+                 */
+                Intent i = new Intent("this.doesnt.exist.LAUNCH", Uri.parse("https://www.reddit.com"));
                 startActivity(i);
             }
         });
