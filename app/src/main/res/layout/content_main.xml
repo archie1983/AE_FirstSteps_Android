@@ -142,4 +142,19 @@
         app:layout_constraintStart_toEndOf="@+id/imgJellyFish"
         app:layout_constraintTop_toBottomOf="@+id/btnSendCustomIntent" />
 
+    <Button
+        android:id="@+id/btnIntentDemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="13dp"
+        android:onClick="showIntentDemo"
+        android:text="Intent Demo"
+        app:layout_constraintBottom_toTopOf="@+id/txtExample"
+        app:layout_constraintEnd_toStartOf="@+id/imgNotes"
+        app:layout_constraintStart_toEndOf="@+id/imgJellyFish"
+        app:layout_constraintTop_toBottomOf="@+id/btnDBDemo" />
+
 </android.support.constraint.ConstraintLayout>

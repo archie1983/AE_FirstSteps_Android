@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".IntentDemoActivity"
+            android:label="@string/title_activity_intent_demo"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".DBActivity"
             android:label="@string/title_activity_db"
             android:parentActivityName=".MainActivity"
@@ -24,7 +28,7 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
         <receiver
@@ -51,9 +55,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <provider
-            android:authorities="com.ae.ae_firststeps_android.StudentsProvider"
-            android:name=".StudentsProvider" />
+            android:name=".StudentsProvider"
+            android:authorities="com.ae.ae_firststeps_android.StudentsProvider" />
     </application>
 
 </manifest>

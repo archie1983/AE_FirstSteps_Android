@@ -140,4 +140,14 @@ public class MainActivity extends AppCompatActivity {
         Intent showDBActivity = new Intent(this, DBActivity.class);
         startActivity(showDBActivity);
     }
+
+    /**
+     * Opens the Intent demo activity
+     *
+     * @param v
+     */
+    public void showIntentDemo(View v) {
+        Intent showIntentDemotActivity = new Intent(this, IntentDemoActivity.class);
+        startActivity(showIntentDemotActivity);
+    }
 }
