@@ -18,6 +18,7 @@
         <TextView
             android:id="@+id/txtShowIntentData"
             android:layout_width="fill_parent"
-            android:layout_height="400dp" />
+            android:layout_height="400dp"
+            style="@style/AECustomFontStyle"/>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

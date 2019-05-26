@@ -155,6 +155,7 @@
         app:layout_constraintBottom_toTopOf="@+id/txtExample"
         app:layout_constraintEnd_toStartOf="@+id/imgNotes"
         app:layout_constraintStart_toEndOf="@+id/imgJellyFish"
-        app:layout_constraintTop_toBottomOf="@+id/btnDBDemo" />
+        app:layout_constraintTop_toBottomOf="@+id/btnDBDemo"
+        style="@style/AECustomButton"/>
 
 </android.support.constraint.ConstraintLayout>
