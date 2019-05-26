@@ -15,6 +15,9 @@
     <style name="AECustomTheme" parent="AppTheme">
         <item name="android:buttonStyle">@style/AECustomButton</item>
         <item name="android:textColor">#00FFFF</item>
+        <item name="android:colorPrimary">@color/ae_colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/ae_colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/ae_colorAccent</item>
         <!-- The below is only supported on API 26 or higher -->
         <!--item name="android:fontStyle">@style/AECustomFontStyle</item-->
     </style>
