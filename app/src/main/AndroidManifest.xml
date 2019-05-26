@@ -60,7 +60,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/ae_activity_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AECustomTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
