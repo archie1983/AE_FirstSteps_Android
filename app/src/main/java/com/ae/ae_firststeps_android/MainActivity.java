@@ -150,4 +150,14 @@ public class MainActivity extends AppCompatActivity {
         Intent showIntentDemotActivity = new Intent(this, IntentDemoActivity.class);
         startActivity(showIntentDemotActivity);
     }
+
+    /**
+     * Opens the Intent demo activity
+     *
+     * @param v
+     */
+    public void showCustomComponentDemo(View v) {
+        Intent showCustomComponentActivity = new Intent(this, CustomComponentActivity.class);
+        startActivity(showCustomComponentActivity);
+    }
 }

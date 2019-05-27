@@ -10,15 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/AECustomTheme">
         <activity
+            android:name=".CustomComponentActivity"
+            android:label="@string/title_activity_custom_component"
+            android:theme="@style/AECustomTheme.NoActionBar"></activity>
+        <activity
             android:name=".IntentCatcherActivity"
             android:label="@string/title_activity_intent_catcher"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"></action>
-                <action android:name="com.ae.ae_firststeps_android.LAUNCH"></action>
-                <category android:name="android.intent.category.BROWSABLE"></category>
-                <category android:name="android.intent.category.DEFAULT"></category>
-                <data android:scheme="http"></data>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="com.ae.ae_firststeps_android.LAUNCH" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
             </intent-filter>
         </activity>
         <activity
@@ -63,6 +69,7 @@
             android:theme="@style/AECustomTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
