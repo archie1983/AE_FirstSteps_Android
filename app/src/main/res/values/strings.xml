@@ -14,4 +14,5 @@
     <string name="title_activity_intent_demo">IntentDemoActivity</string>
     <string name="title_activity_intent_catcher">IntentCatcherActivity</string>
     <string name="title_activity_custom_component">CustomComponentActivity</string>
+    <string name="title_activity_drag_ndrop">DragNDropActivity</string>
 </resources>

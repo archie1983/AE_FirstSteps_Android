@@ -152,12 +152,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Opens the Intent demo activity
+     * Opens the Custom Component demo activity
      *
      * @param v
      */
     public void showCustomComponentDemo(View v) {
         Intent showCustomComponentActivity = new Intent(this, CustomComponentActivity.class);
         startActivity(showCustomComponentActivity);
+    }
+
+    /**
+     * Opens the Drag and drop demo activity
+     *
+     * @param v
+     */
+    public void showDragNDropDemo(View v) {
+        Intent showDragNDropActivity = new Intent(this, DragNDropActivity.class);
+        startActivity(showDragNDropActivity);
     }
 }

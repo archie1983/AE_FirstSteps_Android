@@ -175,4 +175,19 @@
         app:layout_constraintTop_toBottomOf="@+id/txtExample"
         app:layout_constraintVertical_bias="1.0" />
 
+    <Button
+        android:id="@+id/btnDragNDrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="13dp"
+        android:onClick="showDragNDropDemo"
+        android:text="DragNDrop"
+        app:layout_constraintBottom_toTopOf="@+id/txtEditText"
+        app:layout_constraintEnd_toStartOf="@+id/btnCustomComponent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtExample" />
+
 </android.support.constraint.ConstraintLayout>

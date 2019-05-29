@@ -21,8 +21,4 @@
         <!-- The below is only supported on API 26 or higher -->
         <!--item name="android:fontStyle">@style/AECustomFontStyle</item-->
     </style>
-    <style name="AECustomTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
 </resources>
