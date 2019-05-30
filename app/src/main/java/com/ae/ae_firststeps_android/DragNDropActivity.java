@@ -18,8 +18,10 @@ import android.widget.RelativeLayout;
 public class DragNDropActivity extends AppCompatActivity {
 
     ImageView img;
-    String msg;
-    private android.widget.RelativeLayout.LayoutParams layoutParams;
+    String msg = "AE: ";
+    //private android.widget.RelativeLayout.LayoutParams layoutParams;
+    //private android.view.ViewGroup.LayoutParams layoutParams;
+    private android.support.constraint.ConstraintLayout.LayoutParams layoutParams;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +50,8 @@ public class DragNDropActivity extends AppCompatActivity {
                 ClipData dragData = new ClipData(v.getTag().toString(),mimeTypes, item);
                 View.DragShadowBuilder myShadow = new View.DragShadowBuilder(img);
 
-                v.startDrag(dragData,myShadow,null,0);
+                //v.startDrag(dragData,myShadow,null,0);
+                v.startDragAndDrop(dragData,myShadow,null,0);
                 return true;
             }
         });
@@ -58,41 +61,54 @@ public class DragNDropActivity extends AppCompatActivity {
             public boolean onDrag(View v, DragEvent event) {
                 switch(event.getAction()) {
                     case DragEvent.ACTION_DRAG_STARTED:
-                        layoutParams = (RelativeLayout.LayoutParams)v.getLayoutParams();
                         Log.d(msg, "Action is DragEvent.ACTION_DRAG_STARTED");
+                        //layoutParams = (RelativeLayout.LayoutParams)v.getLayoutParams();
+                        layoutParams = (android.support.constraint.ConstraintLayout.LayoutParams)v.getLayoutParams();
 
                         // Do nothing
                         break;
 
                     case DragEvent.ACTION_DRAG_ENTERED:
-                        Log.d(msg, "Action is DragEvent.ACTION_DRAG_ENTERED");
                         int x_cord = (int) event.getX();
                         int y_cord = (int) event.getY();
+                        Log.d(msg, "Action is DragEvent.ACTION_DRAG_ENTERED. X=" + x_cord + " Y=" + y_cord);
                         break;
 
                     case DragEvent.ACTION_DRAG_EXITED :
-                        Log.d(msg, "Action is DragEvent.ACTION_DRAG_EXITED");
                         x_cord = (int) event.getX();
                         y_cord = (int) event.getY();
-                        layoutParams.leftMargin = x_cord;
-                        layoutParams.topMargin = y_cord;
+                        Log.d(msg, "Action is DragEvent.ACTION_DRAG_EXITED. X=" + x_cord + " Y=" + y_cord);
+                        //layoutParams.leftMargin = x_cord;
+                        //layoutParams.topMargin = y_cord;
+                        //layoutParams.
                         v.setLayoutParams(layoutParams);
                         break;
 
                     case DragEvent.ACTION_DRAG_LOCATION  :
-                        Log.d(msg, "Action is DragEvent.ACTION_DRAG_LOCATION");
                         x_cord = (int) event.getX();
                         y_cord = (int) event.getY();
+
+                        Log.d(msg, "Action is DragEvent.ACTION_DRAG_LOCATION. X=" + x_cord + " Y=" + y_cord);
                         break;
 
                     case DragEvent.ACTION_DRAG_ENDED   :
-                        Log.d(msg, "Action is DragEvent.ACTION_DRAG_ENDED");
+                        x_cord = (int) event.getX();
+                        y_cord = (int) event.getY();
+                        Log.d(msg, "Action is DragEvent.ACTION_DRAG_ENDED. X=" + x_cord + " Y=" + y_cord);;
 
                         // Do nothing
                         break;
 
                     case DragEvent.ACTION_DROP:
-                        Log.d(msg, "ACTION_DROP event");
+                        //x_cord = (int) event.getX() - (v.getWidth() / 2);
+                        //y_cord = (int) event.getY() - (v.getHeight() / 2);
+                        x_cord = (int) event.getX();
+                        y_cord = (int) event.getY();
+                        Log.d(msg, "ACTION_DROP event. X=" + x_cord + " Y=" + y_cord);
+                        layoutParams.leftMargin = x_cord;
+                        layoutParams.topMargin = y_cord;
+                        v.setLayoutParams(layoutParams);
+                        //img.setVisibility(View.VISIBLE);
 
                         // Do nothing
                         break;
@@ -109,8 +125,9 @@ public class DragNDropActivity extends AppCompatActivity {
                     ClipData data = ClipData.newPlainText("", "");
                     View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(img);
 
-                    img.startDrag(data, shadowBuilder, img, 0);
-                    img.setVisibility(View.INVISIBLE);
+                    //img.startDrag(data, shadowBuilder, img, 0);
+                    v.startDragAndDrop(data,shadowBuilder,null,0);
+                    //img.setVisibility(View.INVISIBLE);
                     return true;
                 } else {
                     return false;
