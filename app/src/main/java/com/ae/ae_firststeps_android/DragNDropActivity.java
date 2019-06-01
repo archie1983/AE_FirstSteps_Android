@@ -19,6 +19,7 @@ public class DragNDropActivity extends AppCompatActivity {
 
     ImageView img;
     String msg = "AE: ";
+    boolean blnDropped = false;
     //private android.widget.RelativeLayout.LayoutParams layoutParams;
     //private android.view.ViewGroup.LayoutParams layoutParams;
     private android.support.constraint.ConstraintLayout.LayoutParams layoutParams;
@@ -52,6 +53,7 @@ public class DragNDropActivity extends AppCompatActivity {
 
                 //v.startDrag(dragData,myShadow,null,0);
                 v.startDragAndDrop(dragData,myShadow,null,0);
+                blnDropped = false;
                 return true;
             }
         });
@@ -81,7 +83,7 @@ public class DragNDropActivity extends AppCompatActivity {
                         //layoutParams.leftMargin = x_cord;
                         //layoutParams.topMargin = y_cord;
                         //layoutParams.
-                        v.setLayoutParams(layoutParams);
+                        //v.setLayoutParams(layoutParams);
                         break;
 
                     case DragEvent.ACTION_DRAG_LOCATION  :
@@ -95,6 +97,12 @@ public class DragNDropActivity extends AppCompatActivity {
                         x_cord = (int) event.getX();
                         y_cord = (int) event.getY();
                         Log.d(msg, "Action is DragEvent.ACTION_DRAG_ENDED. X=" + x_cord + " Y=" + y_cord);;
+                        if (!blnDropped) {
+                            layoutParams.leftMargin = x_cord;
+                            layoutParams.topMargin = y_cord;
+                            v.setLayoutParams(layoutParams);
+                            blnDropped = true;
+                        }
 
                         // Do nothing
                         break;
@@ -105,9 +113,13 @@ public class DragNDropActivity extends AppCompatActivity {
                         x_cord = (int) event.getX();
                         y_cord = (int) event.getY();
                         Log.d(msg, "ACTION_DROP event. X=" + x_cord + " Y=" + y_cord);
-                        layoutParams.leftMargin = x_cord;
-                        layoutParams.topMargin = y_cord;
-                        v.setLayoutParams(layoutParams);
+                        if (!blnDropped) {
+                            layoutParams.leftMargin = x_cord;
+                            layoutParams.topMargin = y_cord;
+                            v.setLayoutParams(layoutParams);
+                            blnDropped = true;
+                        }
+
                         //img.setVisibility(View.VISIBLE);
 
                         // Do nothing
@@ -128,6 +140,7 @@ public class DragNDropActivity extends AppCompatActivity {
                     //img.startDrag(data, shadowBuilder, img, 0);
                     v.startDragAndDrop(data,shadowBuilder,null,0);
                     //img.setVisibility(View.INVISIBLE);
+                    blnDropped = false;
                     return true;
                 } else {
                     return false;
