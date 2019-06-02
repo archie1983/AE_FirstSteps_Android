@@ -170,4 +170,14 @@ public class MainActivity extends AppCompatActivity {
         Intent showDragNDropActivity = new Intent(this, DragNDropActivity.class);
         startActivity(showDragNDropActivity);
     }
+
+    /**
+     * Opens the GUI demo activity
+     *
+     * @param v
+     */
+    public void showGUIDemo(View v) {
+        Intent showGUIDemoActivity = new Intent(this, GuiDemoActivity.class);
+        startActivity(showGUIDemoActivity);
+    }
 }

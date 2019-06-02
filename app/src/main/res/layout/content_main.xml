@@ -190,4 +190,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtExample" />
 
+    <Button
+        android:id="@+id/btnGUI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="17dp"
+        android:onClick="showGUIDemo"
+        android:text="GUI Experiments"
+        app:layout_constraintBottom_toTopOf="@+id/btnChangeColour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditText" />
+
 </android.support.constraint.ConstraintLayout>
