@@ -18,4 +18,6 @@
     <string name="img_drag_n_drop_caption">Drag and drop</string>
     <string name="title_activity_gui_demo">GuiDemoActivity</string>
     <string name="title_activity_recycler_view">RecyclerViewActivity</string>
+    <string name="title_dish_list">Dishes</string>
+    <string name="title_dish_detail">Dish Detail</string>
 </resources>

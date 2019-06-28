@@ -33,7 +33,17 @@ public class GuiDemoActivity extends AppCompatActivity {
      * @param v
      */
     public void showCardView(View v) {
-        Intent showRecyclerViewActivity = new Intent(this, CardViewActivity.class);
-        startActivity(showRecyclerViewActivity);
+        Intent showCardViewActivity = new Intent(this, CardViewActivity.class);
+        startActivity(showCardViewActivity);
+    }
+
+    /**
+     * Opens the Master/Detail demo
+     *
+     * @param v
+     */
+    public void showMasterDetailDemo(View v) {
+        Intent showMasterDetailDemo = new Intent(this, DishListActivity.class);
+        startActivity(showMasterDetailDemo);
     }
 }

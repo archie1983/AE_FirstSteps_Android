@@ -10,9 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/AECustomTheme">
         <activity
+            android:name=".DishListActivity"
+            android:label="@string/title_dish_list"
+            android:parentActivityName=".GuiDemoActivity"
+            android:theme="@style/AECustomTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ae.ae_firststeps_android.GuiDemoActivity" />
+        </activity>
+        <activity
+            android:name=".DishDetailActivity"
+            android:label="@string/title_dish_detail"
+            android:parentActivityName=".DishListActivity"
+            android:theme="@style/AECustomTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ae.ae_firststeps_android.DishListActivity" />
+        </activity>
+        <activity
             android:name=".CardViewActivity"
             android:label="@string/title_activity_recycler_view"
-            android:theme="@style/AECustomTheme.NoActionBar"></activity>
+            android:theme="@style/AECustomTheme.NoActionBar" />
         <activity
             android:name=".GuiDemoActivity"
             android:label="@string/title_activity_gui_demo"
