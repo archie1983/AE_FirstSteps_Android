@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AECustomTheme">
         <activity
-            android:name=".RecyclerViewActivity"
+            android:name=".CardViewActivity"
             android:label="@string/title_activity_recycler_view"
             android:theme="@style/AECustomTheme.NoActionBar"></activity>
         <activity

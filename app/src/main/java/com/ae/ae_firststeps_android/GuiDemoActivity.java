@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
@@ -29,12 +28,12 @@ public class GuiDemoActivity extends AppCompatActivity {
     }
 
     /**
-     * Opens the RecyclerViewActivity demo
+     * Opens the CardViewActivity demo
      *
      * @param v
      */
-    public void showRecyclerView(View v) {
-        Intent showRecyclerViewActivity = new Intent(this, RecyclerViewActivity.class);
+    public void showCardView(View v) {
+        Intent showRecyclerViewActivity = new Intent(this, CardViewActivity.class);
         startActivity(showRecyclerViewActivity);
     }
 }
