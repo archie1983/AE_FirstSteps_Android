@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AECustomTheme">
+        <activity android:name=".RecyclerViewActivity"></activity>
         <activity
             android:name=".DishListActivity"
             android:label="@string/title_dish_list"
