@@ -57,8 +57,16 @@ public class DishDetailFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        /**
+         * AE: So we're taking a dish_detail layout and inflating it into this view
+         */
         View rootView = inflater.inflate(R.layout.dish_detail, container, false);
 
+        /**
+         * Now once it's been inflated, we can access its components, one of which is a TextView
+         * and (imo stupidly) is called the same as the layout: dish_detail. Once we have a handle
+         * of that, we just set the text and it's done.
+         */
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
             ((TextView) rootView.findViewById(R.id.dish_detail)).setText(mItem.details);
