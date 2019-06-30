@@ -46,4 +46,14 @@ public class GuiDemoActivity extends AppCompatActivity {
         Intent showMasterDetailDemo = new Intent(this, DishListActivity.class);
         startActivity(showMasterDetailDemo);
     }
+
+    /**
+     * Opens the Master/Detail demo
+     *
+     * @param v
+     */
+    public void showRecyclerViewDemo(View v) {
+        Intent showRecyclerViewDemo = new Intent(this, RecyclerViewActivity.class);
+        startActivity(showRecyclerViewDemo);
+    }
 }
