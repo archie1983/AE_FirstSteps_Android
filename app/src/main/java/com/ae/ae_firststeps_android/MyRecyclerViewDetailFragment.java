@@ -83,7 +83,7 @@ public class MyRecyclerViewDetailFragment extends Fragment {
          * of that, we just set the text and it's done.
          */
         if (chosenThing != null) {
-            ((TextView) rootView.findViewById(R.id.txtID)).setText(chosenThing.getIdOfThisThing());
+            ((TextView) rootView.findViewById(R.id.txtID)).setText(chosenThing.getIdOfThisThing() + "");
             ((TextView) rootView.findViewById(R.id.txtContent)).setText(chosenThing.getDescriptonOfThisThing());
         }
 
