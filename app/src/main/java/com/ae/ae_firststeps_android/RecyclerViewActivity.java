@@ -36,6 +36,14 @@ public class RecyclerViewActivity extends AppCompatActivity implements MyRecycle
 
     @Override
     public void onItemClick(View view, int position) {
-        Toast.makeText(this, "You clicked " + adapter.getItem(position) + " on row number " + position, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "You clicked " + adapter.getItem(position) + " on row number " + position, Toast.LENGTH_SHORT).show();
+        Bundle arguments = new Bundle();
+        arguments.putInt(MyRecyclerViewDetailFragment.ARG_ITEM_ID, position);
+        MyRecyclerViewDetailFragment fragment = new MyRecyclerViewDetailFragment();
+        fragment.setArguments(arguments);
+        this.getSupportFragmentManager().beginTransaction()
+                .replace(R.id.frmThingPresentation, fragment)
+                .commit();
+
     }
 }
