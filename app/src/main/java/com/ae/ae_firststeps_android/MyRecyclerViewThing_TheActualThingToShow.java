@@ -11,23 +11,23 @@ package com.ae.ae_firststeps_android;
 public class MyRecyclerViewThing_TheActualThingToShow {
     private int idOfThisThing = 99;
     private String descriptonOfThisThing = "Just some thing";
-    private String imagePath = "@drawable/dragndrop";
+    private int imageResource = R.drawable.dragndrop;
 
     public String getDescriptonOfThisThing() {
         return descriptonOfThisThing;
     }
 
-    public String getImagePath() {
-        return imagePath;
+    public int getImageResource() {
+        return imageResource;
     }
 
     public MyRecyclerViewThing_TheActualThingToShow(int idOfThisThing,
                                                     String descriptonOfThisThing,
-                                                    String imagePath) {
+                                                    int imageResource) {
         if (idOfThisThing < 99) {
             this.descriptonOfThisThing = descriptonOfThisThing;
             this.idOfThisThing = idOfThisThing;
-            this.imagePath = imagePath;
+            this.imageResource = imageResource;
         }
     }
 

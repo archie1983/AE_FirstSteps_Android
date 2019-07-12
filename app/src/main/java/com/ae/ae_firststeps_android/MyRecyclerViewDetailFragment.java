@@ -1,12 +1,14 @@
 package com.ae.ae_firststeps_android;
 
 import android.app.Activity;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.ArrayList;
 
@@ -40,7 +42,7 @@ public class MyRecyclerViewDetailFragment extends Fragment {
         for (int i = 0; i < 10; i++) {
             thingsCollection.add(new MyRecyclerViewThing_TheActualThingToShow(i,
                     "thing # " + i,
-                    "@drawable/mochito"));
+                    (i % 2 == 0 ? R.drawable.mochito : R.drawable.dragndrop)));
         }
 
         /**
@@ -48,7 +50,7 @@ public class MyRecyclerViewDetailFragment extends Fragment {
          */
         thingsCollection.add(new MyRecyclerViewThing_TheActualThingToShow(99,
                 "",
-                ""));
+                R.drawable.dragndrop));
     }
 
     @Override
@@ -83,8 +85,9 @@ public class MyRecyclerViewDetailFragment extends Fragment {
          * of that, we just set the text and it's done.
          */
         if (chosenThing != null) {
-            ((TextView) rootView.findViewById(R.id.txtID)).setText(chosenThing.getIdOfThisThing() + "");
+            ((TextView) rootView.findViewById(R.id.txtID)).setText(chosenThing.getIdOfThisThing() + "@" + chosenThing.getImageResource());
             ((TextView) rootView.findViewById(R.id.txtContent)).setText(chosenThing.getDescriptonOfThisThing());
+            ((ImageView) rootView.findViewById(R.id.imgThing)).setImageResource(chosenThing.getImageResource());
         }
 
         return rootView;
